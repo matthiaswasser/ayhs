@@ -3,6 +3,7 @@
   <title>American Yawp for High School</title>
   <link rel="stylesheet" href="vanilla.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦅</text></svg>">
+  <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
 </head>
 <body>
   <h1>American Yawp for High School</h1>
@@ -11,4 +12,19 @@
     <li>an adjustable reading level, and</li>
     <li>embedded flashcards via Andy Matsuchak's <a href="https://docs.withorbit.com/">Orbit</a></li>
   </ul>
+  <orbit-reviewarea color="yellow">
+      <orbit-prompt
+        question="What's the working name for Andy's experimental mnemonic medium platform?"
+        answer="Orbit"
+      ></orbit-prompt>
+      <orbit-prompt
+        question="What kind of quantum gate is this?"
+        question-attachments="https://docs.withorbit.com/toffoli.png"
+        answer="A Toffoli gate."
+      ></orbit-prompt>
+      <orbit-prompt
+        question="Given a right triangle with legs of length $a$ and $b$, what is the length of hypotenuse $c$?"
+        answer="$$c = \sqrt{a^2 + b^2}$$"
+      ></orbit-prompt>
+    </orbit-reviewarea>
 </body>
