@@ -24,6 +24,13 @@ time, mark, audio, video {
     box-sizing: border-box;
 }
 
+/* AYHS specific - dropdown menu aspects */
+.content { display: none; }
+.content:target { display: block; }
+/* Show first content block by default */
+.content:first-of-type { display: block; }
+
+
 /* Variables */
 :root {
     --desktop-font-size: 1.2rem/1.55;
