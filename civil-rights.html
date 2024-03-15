@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Civil Rights</title>
-        <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
-        <link rel="stylesheet" href="vanilla.css">
-	      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦅</text></svg>">
-    </head>
-    <style>
-.inv {
-    display: none;
-}
-    </style>
-    <body>
-         <select id="target">
-            <option value="">Select...</option>
-            <option value="college">College</option>
-            <option value="ninth">Ninth Grade</option>
-        <select>
+	<head>
+		    <meta charset="UTF-8">
+		        <title>Reading Level Adjustment Example</title>
+			    <style>
+        .text-content { display: none; }
+	        .text-content.default { display: block; }
+		    </style>
+	</head>
+	<body>
 
-        <div id="college" class="inv">College</div>
-        <div id="ninth" class="inv">Ninth</div>
-         <select id="target">
-            <option value="">Select...</option>
-            <option value="college">College</option>
-            <option value="ninth">Ninth Grade</option>
-        <select>
+		<!-- Dropdown for selecting reading level -->
+		<select id="readingLevelDropdown">
+			    <option value="default">Choose Reading Level</option>
+			        <option value="level1">Level 1</option>
+				    <option value="level2">Level 2</option>
+		</select>
 
-        <div id="college" class="inv">College</div>
-        <div id="ninth" class="inv">Ninth</div>
-        
-        <script>
-            document
-                .getElementById('target')
-                .addEventListener('change', function () {
-                    'use strict';
-                    var vis = document.querySelector('.vis'),   
-                        target = document.getElementById(this.value);
-                    if (vis !== null) {
-                        vis.className = 'inv';
-                    }
-                    if (target !== null ) {
-                        target.className = 'vis';
-                    }
-            });
-        </script>
-    </body>
+		<!-- Section 1 -->
+		<div class="section">
+			    <div class="text-content default" data-level="level1">
+				            <p>This is the text for Section 1, Level 1.</p>
+					        </div>
+						    <div class="text-content" data-level="level2">
+							            <p>This is the more advanced text for Section 1, Level 2.</p>
+								        </div>
+		</div>
+
+		<!-- Non-adjusted Image -->
+		<div class="image-container">
+			    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+		</div>
+
+		<!-- Section 2 -->
+		<div class="section">
+			    <div class="text-content default" data-level="level1">
+				            <p>This is the text for Section 2, Level 1.</p>
+					        </div>
+						    <div class="text-content" data-level="level2">
+							            <p>This is the more advanced text for Section 2, Level 2.</p>
+								        </div>
+		</div>
+
+		<script>
+			    document.getElementById('readingLevelDropdown').addEventListener('change', function() {
+							            var selectedLevel = this.value;
+							            document.querySelectorAll('.text-content').forEach(function(element) {
+												                if (element.dataset.level === selectedLevel) {
+																		                element.style.display = 'block';
+																		            } else {
+																							                    element.style.display = 'none';
+																							                }
+												            });
+							        });
+		</script>
+
+	</body>
 </html>
