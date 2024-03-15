@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Civil Rights</title>
+        <script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
+        <link rel="stylesheet" href="vanilla.css">
+	      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦅</text></svg>">
+    </head>
+    <style>
+.inv {
+    display: none;
+}
+    </style>
+    <body>
+        <select id="target">
+            <option value="">Select...</option>
+            <option value="college">College</option>
+            <option value="ninth">Ninth Grade</option>
+        <select>
+
+        <div id="college" class="inv">College</div>
+        <div id="ninth" class="inv">Ninth</div>
+        
+        <script>
+            document
+                .getElementById('target')
+                .addEventListener('change', function () {
+                    'use strict';
+                    var vis = document.querySelector('.vis'),   
+                        target = document.getElementById(this.value);
+                    if (vis !== null) {
+                        vis.className = 'inv';
+                    }
+                    if (target !== null ) {
+                        target.className = 'vis';
+                    }
+            });
+        </script>
+    </body>
+</html>
