@@ -5,6 +5,17 @@
 	<script type="module" src="https://js.withorbit.com/orbit-web-component.js"></script>
 	<link rel="stylesheet" href="vanilla.css">
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦅</text></svg>">
+	<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
+					  document.querySelector('select').addEventListener('change', function() {
+								      const sections = document.querySelectorAll('.content');
+								      sections.forEach(section => section.style.display = 'none');
+								      const selectedSection = document.querySelector(this.value);
+								      if(selectedSection) selectedSection.style.display = 'block';
+								    });
+				});
+	</script>
+
 </head>
 <body>
 	<h1>XVI: Capital and Labor</h1>
