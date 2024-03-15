@@ -25,10 +25,10 @@ time, mark, audio, video {
 }
 
 /* AYHS specific - dropdown menu aspects */
-.content { display: none; }
-.content:target { display: block; }
+#container .content { display: none; }
+#container .content:target { display: block; }
 /* Show first content block by default */
-.content:first-of-type { display: block; }
+#container .content:first-of-type { display: block; }
 
 
 /* Variables */
