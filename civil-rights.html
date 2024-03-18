@@ -16,15 +16,29 @@
 <h1>Civil Rights</h1>
 
 <ol>
-	<li><a href="pre-review">review of material so far</a></li>
-	<li><a href="sec-1">1401: <em>Brown v. Board</em> and educational desegregation</a></li>
-	<li><a href="sec-2">1402: the Civil Rights Movement in the 1950s</a></li>
-	<li><a href="sec-3">1403: the Civil Rights Movement in the 1960s</a></li>
+	<li><a href="#about">what's going on here?</a></li>
+	<li><a href="#pre-review">review of material so far</a></li>
+	<li><a href="#sec-1">1401: <em>Brown v. Board</em> and educational desegregation</a></li>
+	<li><a href="#sec-2">1402: the Civil Rights Movement in the 1950s</a></li>
+	<li><a href="#sec-3">1403: the Civil Rights Movement in the 1960s</a></li>
 </ol>
+
+<!-- Dropdown for selecting reading level -->
+<select id="readingLevelDropdown">
+    <option value="default">Choose Reading Level</option>
+    <option value="level1">High School (default)</option>
+    <option value="level2">College (original)</option>
+</select>
+
+<h2 id="about">what's going on here?</h2>
+
+<p>This is your reading for the next few days. (Since this is an experiment, I haven't filled it out with everything for this unit, but if the first day or two are a success, I will.) Go through the flashcards as you go. If you sign up inside the flashcard window, you can get automated review when you come back of the ones that were trickiest for you, but you don't need to sign up; you can just reload the page and go through them again. </p>
+
+<p>Credit where credit is due: the original text here is from Stanford's <a href="https://www.americanyawp.com/index.html"><em>American Yawp</em></a>, which operates under an open-source license - specifically <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, which means that everything on this page is also CC BY-SA 4.0 and if you want to copy or remix it you should. I adapted the text to a high school reading level via AI on first pass and manually reviewed it. The flashcard questions and answers are my own, but the tech implementation I'm using is Andy Matsuchak's <a href="https://docs.withorbit.com/">Orbit</a>.</p> 
 
 <h2 id="pre-review">review of material so far</h2>
 
-<p>You should already know this, but it also might have been a while.</
+<p>You should already know this, but it also might have been a while.</p>
 
 <orbit-reviewarea color="yellow">
   <orbit-prompt
@@ -51,18 +65,11 @@
   >
 </orbit-reviewarea>
 
-<!-- Dropdown for selecting reading level -->
-<select id="readingLevelDropdown">
-    <option value="default">Choose Reading Level</option>
-    <option value="level1">Ninth Grade (default)</option>
-    <option value="level2">College (original)</option>
-</select>
-
 <h2 id="sec-1"><em>Brown v. Board</em> and educational desegregation</h2>
 <!-- Section 1 -->
 <div class="section">
     <div class="text-content default" data-level="level1">
-        <p>After World War II, America faced ongoing issues with racial discrimination, including fights against <span title="separation">segregation</span> in schools. Back in 1896, the Supreme Court had ruled that having separate facilities for different races was okay as long as they were equal. But in reality, Black students in the South often had less money spent on their education, went to schools in poor condition, and used low-quality learning materials. African Americans fought against this unfair treatment in education for over fifty years.</p>
+        <p>After World War II, America faced ongoing issues with racial discrimination, including fights against <span title="separation">segregation</span> in schools. Back in 1896, the Supreme Court had ruled in <em>Plessy v. Ferguson</em> that having separate facilities for different races was okay as long as they were equal. But in reality, Black students in the South often had less money spent on their education, went to schools in poor condition, and used low-quality learning materials. African Americans fought against this unfair treatment in education for over fifty years.</p>
 		<p>Then, on May 17, 1954, the Supreme Court made a big decision in a case called <em>Brown v. Board of Education</em>. The Chief Justice, Earl Warren, announced that the court unanimously agreed (9-0) that separating students by race was unconstitutional because it went against the Equal Protection Clause of the Fourteenth Amendment. They said that having separate schools for different races was naturally unfair. This decision made "separate but equal" illegal.</p>
 		<p>The victory in the <em>Brown</em> case came after many years of hard work by African Americans, who fought against racial inequality through lawsuits and protests, and the support of liberal judges on the Supreme Court. Starting in the 1930s, the <abbr title="National Association for the Advancement of Colored People">NAACP</abbr> (a group working for the rights of African Americans) began to attack the laws that allowed segregation in the South. Laws and social norms there were especially tough on Black people. Through many court cases about education, voting rights, and jury service, NAACP lawyers like Charles Hamilton Houston, Robert L. Clark, and Thurgood Marshall, who later became a Supreme Court Justice himself, worked to show that the government was not providing equal opportunities to Black students as promised. By the late 1940s, activists started to argue more strongly against the idea that separation by race was even legal.</p>
     </div>
@@ -340,4 +347,5 @@
 
 </body>
 </html>
+
 
