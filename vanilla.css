@@ -155,6 +155,10 @@ input:focus, input:active { background-color: var(--secondary-color); border-col
 
 sup { font-size: 80%; vertical-align: top; }
 
+[title] {
+    text-decoration: underline dotted;
+}
+
 /* Mobile Styling */
 @media screen and (max-width: 75ch) {
     body, input {
